@@ -1,0 +1,151 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+   Note from Sam: this is a standard CSS "reset" - it removes all 
+   browser styles so that you start off with a nice crisp vanilla
+   stylesheet.  Feel free to edit to add your own flare or delete
+   altogether if you want to default browser styles.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+	Custom assigned CSS
+*/
+
+:root {
+	
+	/* Font Family */
+	--ffam-brand: 'Bree Serif', serif;
+	--ffam-body: 'Libre Franklin', sans-serif;
+	
+	/* Box Shadow */
+	--bs: 0.75em 0.75em 1.5em rgba(0,0,0,.35),
+    0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+  }
+
+/* 
+    Doc CSS
+*/
+
+main {
+	display: flex;
+	justify-content: center;
+}
+
+h1{
+	font-family: var(--ffam-brand);
+	color: #F9F9F9;
+	font-size: 1.5em;
+	text-shadow: var(--bs);
+	padding: 0.3em;
+}
+
+h3{
+	font-family: var(--ffam-brand);
+	color: #F9F9F9;
+	font-size: 1.3em;
+	background: #7D7ABC;
+	padding: 0.3em;
+}
+
+p, li, h2{
+	font-family: var(--ffam-body);
+	font-weight: 600;
+	color: #2d2d2d;
+}
+
+li{
+	margin-top:0.5em;
+}
+a:link, a:visited{
+	display: block;
+	font-family: var(--ffam-body);
+	font-size:1.1em;
+	font-weight: 600;
+	color: #2d2d2d;
+	text-decoration: none;
+	transition: transform 150ms ease-in;
+}
+a:hover{
+	color:#EF767A;
+	transform: scale(1.2);
+}
+
+.exerPage {
+	background:#F9F9F9;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 3em;
+	height: auto;
+}
+
+nav{
+	background: #7D7ABC;
+	border-right: 4em solid #EF767A;
+	padding: 3em;
+	z-index: 1;
+	box-shadow: var(--bs);
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+}
+
+#evport{
+	width: 100vw;
+	height: 100vh;
+	background: #F9F9F9;
+}
+
+p.sub{
+	width:20vw;
+	overflow:inherit;
+}
